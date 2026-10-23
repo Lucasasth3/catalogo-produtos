@@ -7,8 +7,8 @@ export default function ProductDetails({ product, loading, error, onClose }) {
       {!loading && !error && product && (
         <>
           <h2>{product.nome}</h2>
-          <p>Categoria: {product.categoria}</p>
-          <p>{product.descricao}</p>
+          {product.categoria && <p>Categoria: {product.categoria}</p>}
+          {product.descricao && <p>{product.descricao}</p>}
           <p>Preço: {product.preco.toLocaleString('pt-BR', {
             style: 'currency', currency: 'BRL'
           })}</p>
