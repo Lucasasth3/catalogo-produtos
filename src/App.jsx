@@ -57,6 +57,7 @@ export default function App() {
   }, [selectedId]);
 
   function viewDetails(id) {
+    if (selectedId === id) return;
     setSelectedProduct(null);
     setDetailsError('');
     setDetailsLoading(true);
